@@ -11,7 +11,7 @@
 
 ##### Реализация:
 
-Сборка
+Сборка 
 ```shell
 docker-compose up -d --no-deps --build
 ```
