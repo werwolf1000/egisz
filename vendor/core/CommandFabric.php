@@ -14,7 +14,7 @@ class CommandFabric
         $command = new \command\SellerCommand();
         switch($options['command']) {
             case 'get-sellers':  $command->getSellers($options); break;
-            case 'get-change-sellers': $command->getChangeSellers($options); break;
+            case 'get-change-sellers': $command->getChangeSellers(); break;
             default : throw new Exception('Команда не найдена');
         }
     }
