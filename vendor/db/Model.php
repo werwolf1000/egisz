@@ -25,7 +25,7 @@ class Model
             $this->query->where[] = $field. " = ". (is_numeric($operator) ? $operator : "'" . $operator ."'");
         }
         else {
-            $this->query->where[] = $field. " ". $operator. " ". (is_numeric($operator) ? $operator : "'" . $operator ."'");
+            $this->query->where[] = $field. " ". $operator. " ". (is_numeric($value) ? $value : "'" . $value ."'");
         }
 
         return $this;
