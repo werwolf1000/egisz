@@ -18,7 +18,7 @@ docker-compose up -d --no-deps --build
 Реализовать метод отдающий данные по справочнику, учитывающий пагинацию
 и фильтр по версии
 ```shell
-docker-compose run task php index.php --command get-sellers --start=0 --offset=5 --version=1 bash
+docker-compose run task php index.php --command get-sellers --start=0 --offset=5 --version='2021-05-16' bash
 ```
 
 Реализовать метод показывающий изменения между версиями справочника

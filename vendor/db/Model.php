@@ -21,10 +21,11 @@ class Model
     public function where( string $field, string $operator = "", string $value = ""): Model
     {
         if(func_num_args() == 2) {
-            $this->query->where[] = $field. " = ". $operator;
+
+            $this->query->where[] = $field. " = ". (is_numeric($operator) ? $operator : "'" . $operator ."'");
         }
         else {
-            $this->query->where[] = $field. " ". $operator. " ". $value;
+            $this->query->where[] = $field. " ". $operator. " ". (is_numeric($operator) ? $operator : "'" . $operator ."'");
         }
 
         return $this;
@@ -61,6 +62,7 @@ class Model
             $sql .= $this->query->limit;
         }
         $sql .= ";";
+        var_dump($sql);
         return $db->query($sql, static::class);
     }
 }
