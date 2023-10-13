@@ -62,7 +62,7 @@ class Model
             $sql .= $this->query->limit;
         }
         $sql .= ";";
-        var_dump($sql);
+
         return $db->query($sql, static::class);
     }
 }
